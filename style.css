@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
 * {
   margin: 0;
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 400;
   height: 100vh;
   color: #333;
@@ -168,4 +168,57 @@ main {
 .player--winner .name {
   font-weight: 700;
   color: #c7365f;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    overflow: visible;
+  }
+  .name {
+    font-size: 3.5rem;
+  }
+  .score {
+    font-size: 7rem;
+  }
+  .current-label {
+    font-size: 1.5rem;
+  }
+  .current-score {
+    font-size: 3rem;
+  }
+
+  .btn {
+    padding: 0.6rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 25rem;
+  }
+  .btn::first-letter {
+    font-size: 1.5rem;
+    margin-right: 0;
+  }
+
+  .btn--new {
+    top: 0.25rem;
+  }
+
+  .btn--roll {
+    background-color: rgba(255, 255, 255, 1);
+    left: 10%;
+    top: 50%;
+  }
+
+  .btn--hold {
+    background-color: rgba(255, 255, 255, 1);
+    position: absolute;
+    left: 90%;
+    top: 50%;
+  }
+  .dice {
+    left: 50%;
+    top: 50%;
+    height: 8rem;
+  }
 }
