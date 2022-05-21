@@ -170,13 +170,23 @@ main {
   color: #c7365f;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   main {
     flex-direction: column;
     width: auto;
     height: auto;
     overflow: visible;
   }
+
+  .player {
+    flex: auto;
+    padding: 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.75s;
+  }
+
   .name {
     font-size: 3.5rem;
   }
@@ -201,7 +211,7 @@ main {
   }
 
   .btn--new {
-    top: 0.25rem;
+    top: 4rem;
   }
 
   .btn--roll {
@@ -220,5 +230,106 @@ main {
     left: 50%;
     top: 50%;
     height: 8rem;
+  }
+} */
+
+@media (max-width: 700px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+  }
+
+  .player {
+    padding: 4rem;
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.75s;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+  .score {
+    font-size: 5rem;
+  }
+  .current {
+    background-color: #c7365f;
+    opacity: 0.8;
+    border-radius: 9px;
+    color: #fff;
+    width: auto;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.75s;
+  }
+  .current-label {
+    font-size: 1.25rem;
+  }
+  .current-score {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 0.6rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 25rem;
+  }
+  .btn::first-letter {
+    font-size: 1.5rem;
+    margin-right: 0;
+  }
+
+  .btn--new {
+    top: 39%;
+    left: 87%;
+    font-size: 1.25rem;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 2px;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn--roll {
+    background-color: rgba(255, 255, 255, 1);
+    left: 13%;
+    top: 52%;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 2px;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+  }
+
+  .btn--hold {
+    background-color: rgba(255, 255, 255, 1);
+    position: absolute;
+    left: 87%;
+    top: 52%;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 2px;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+  }
+  .dice {
+    left: 13%;
+    top: 39%;
+    height: 6rem;
+    border-radius: 2px;
   }
 }
